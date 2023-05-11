@@ -8,5 +8,5 @@ jobs:
         steps:
             - name: Log node version
               run: |
-                ndoe -v
+                node -v
                 cat /eyc/os-release
