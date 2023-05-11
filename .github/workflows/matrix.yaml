@@ -6,6 +6,8 @@ jobs:
     strategy:
       matrix:
         node_version: [6,8,10]
+        exclude:
+          - node_version: 6
     #  fail-fast: true
     runs-on: ubuntu-latest
     steps:
