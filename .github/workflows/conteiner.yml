@@ -26,7 +26,7 @@ jobs:
       - name: Run a Script
         uses: docker://node:19-alpine
         with:
-            entrypoint: ./script.sh
+            run: ./script.sh
             args: "Some string"
 
   node-docker:
