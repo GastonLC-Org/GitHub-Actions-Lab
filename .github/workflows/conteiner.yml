@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: log node version
         run: node -v
+
       - name: Step with docker
         uses: docker://node:19-alpine
         with:
@@ -20,6 +21,13 @@ jobs:
         with:
             entrypoint: /usr/local/bin/node
             args: -v
+
+      - uses: actions/checkout@v1
+      - name: Run a Script
+        uses: docker://node:19-alpine
+        with:
+            entrypoint: ./script.sh
+            args: "Some string"
 
   node-docker:
     runs-on: ubuntu-latest
